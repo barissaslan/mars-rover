@@ -3,6 +3,6 @@
     public interface IRobot
     {
         void move();
-        void turn(string direction);
+        void turn(string rotation);
     }
 }
