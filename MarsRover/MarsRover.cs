@@ -32,26 +32,21 @@ namespace MarsRover
                         location.Y--;
                     break;
                 case Direction.WEST:
-                    if (location.X > plateau.upperRightCoordinates.X)
+                    if (location.X > plateau.lowerLeftCoordinates.X)
                         location.X--;
                     break;
                 default:
-                    break;
+                    throw new Exception();
             }
         }
 
         public void turn(string rotation)
         {
-            if (rotation == "L")
-            {
+            if (rotation == "L") {
                 this.turnLeft();
-            }
-            else if (rotation == "R")
-            {
+            } else if (rotation == "R") {
                 this.turnRight();
-            }
-            else
-            {
+            } else {
                 throw new Exception();
             }
         }
